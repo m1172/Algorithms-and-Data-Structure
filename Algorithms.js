@@ -88,3 +88,21 @@ function RecursiveFactorial(n) {
 }
 
 console.log(RecursiveFactorial(2));
+
+// Linear Search
+
+function LinearSearch(t) {
+  let arr = [1, 3, 6, -2.7, 8];
+  console.log(arr.indexOf(t));
+}
+LinearSearch(2);
+
+function LinearSearch(arr, t) {
+  for (let i = 0; i <= arr.length + 1; i++) {
+    if (arr[i] == t) {
+      return i;
+    }
+  }
+  return -1;
+}
+console.log(LinearSearch([1, 3, 6, 3, 7, 3, 2], 3));
