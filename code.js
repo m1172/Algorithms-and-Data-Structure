@@ -1,16 +1,11 @@
-function isPowerOfTwo(n) {
-  let x = 0;
-  if (n < 1) {
-    return false;
+function RecursiveFactorial(n) {
+  if (n < 0) {
+    return -1;
+  } else if (n < 2) {
+    return 1;
+  } else {
+    return n * RecursiveFactorial(n - 1);
   }
-  while (n > 1) {
-    x++;
-    if (n % 2 !== 0) {
-      return false;
-    }
-    n = n / 2;
-  }
-  return true;
-  return x;
 }
-console.log(isPowerOfTwo(8));
+
+console.log(RecursiveFactorial(2));

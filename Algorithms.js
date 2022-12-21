@@ -13,16 +13,6 @@ console.log(fibonacci(7));
 // Factorial
 
 function factorial(num) {
-  if (num < 0) return -1;
-  else if (num == 0) return 1;
-  else {
-    return num * factorial(num - 1);
-  }
-}
-
-console.log(factorial(5));
-
-function factorial(num) {
   var result = num;
   if (num === 0 || num === 1) return 1;
   while (num > 1) {
@@ -74,3 +64,27 @@ function isPowerOfTwo(n) {
   return x;
 }
 console.log(isPowerOfTwo(8));
+
+// Recursive Fibonacci
+
+function recursiveFibonacci(n) {
+  if (n < 2) {
+    return n;
+  }
+  return recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
+}
+console.log(recursiveFibonacci(6));
+
+// Recursive Factorial
+
+function RecursiveFactorial(n) {
+  if (n < 0) {
+    return -1;
+  } else if (n < 2) {
+    return 1;
+  } else {
+    return n * RecursiveFactorial(n - 1);
+  }
+}
+
+console.log(RecursiveFactorial(2));
