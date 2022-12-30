@@ -1,22 +1,18 @@
-function recursiveBinarySearch(arr, target) {
-  return Search(arr, target, 0, arr.length - 1);
+function bubleSort(arr) {
+  let swapped;
+  do {
+    swapped = false;
+    for (let i = 0; i < arr.length - 1; i++) {
+      if (arr[i] > arr[i + 1]) {
+        let temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+        swapped = true;
+      }
+    }
+  } while (swapped);
 }
 
-function Search(arr, target, leftIndex, rightIndex) {
-  if (leftIndex > rightIndex) {
-    return -1;
-  }
-
-  let middleIndex = Math.floor((leftIndex + rightIndex) / 2);
-  if (target == arr[middleIndex]) {
-    return middleIndex;
-  }
-
-  if (target < arr[middleIndex]) {
-    return Search(arr, target, leftIndex, middleIndex - 1);
-  } else {
-    return Search(arr, target, middleIndex + 1, rightIndex);
-  }
-}
-
-console.log(recursiveBinarySearch([-1, 2, 4, 7, 9, 100], 4));
+const arr = [8, 20, -2, 4, -6];
+bubleSort(arr);
+console.log(arr);

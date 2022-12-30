@@ -10,6 +10,8 @@ function fibonacci(n) {
 
 console.log(fibonacci(7));
 
+// Big-O = O(n)
+
 // Factorial
 
 function factorial(num) {
@@ -32,6 +34,8 @@ function factorial(num) {
 }
 factorial(5);
 
+// Big-O = O(n)
+
 // Prime numbers
 
 function isPrime(num) {
@@ -45,6 +49,8 @@ function isPrime(num) {
   return prime;
 }
 console.log(isPrime(6));
+
+// Big-O = O(sqrt(n))
 
 // Power of two - Pseudocode
 
@@ -65,6 +71,8 @@ function isPowerOfTwo(n) {
 }
 console.log(isPowerOfTwo(8));
 
+// Big-O = O(1)
+
 // Recursive Fibonacci
 
 function recursiveFibonacci(n) {
@@ -74,6 +82,9 @@ function recursiveFibonacci(n) {
   return recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
 }
 console.log(recursiveFibonacci(6));
+
+// O(n) - Iterative
+// O(2^n) - Recursive
 
 // Recursive Factorial
 
@@ -88,6 +99,8 @@ function RecursiveFactorial(n) {
 }
 
 console.log(RecursiveFactorial(2));
+
+// Big-O = O(n)
 
 // Linear Search
 
@@ -106,6 +119,8 @@ function LinearSearch(arr, t) {
   return -1;
 }
 console.log(LinearSearch([1, 3, 6, 3, 7, 3, 2], 3));
+
+// Big-O = O(n)
 
 // BinarySearch
 
@@ -131,6 +146,8 @@ function binarySearch(arr, target) {
 
 console.log(binarySearch([-5, 2, 4, 6, 10], 2));
 
+// Big-O = O(logn)
+
 // Recursive Binary Search
 
 function recursiveBinarySearch(arr, target) {
@@ -154,3 +171,30 @@ function search(arr, target, leftIndex, rightIndex) {
 }
 
 console.log(recursiveBinarySearch([-1, 2, 4, 7, 9, 100], 4));
+
+// Big-O = O(logn)
+
+// Bubble Sort
+
+function bubleSort(arr) {
+  let swapped;
+  do {
+    swapped = false;
+    for (let i = 0; i < arr.length - 1; i++) {
+      if (arr[i] > arr[i + 1]) {
+        let temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+        swapped = true;
+      }
+    }
+  } while (swapped);
+}
+
+const arr = [8, 20, -2, 4, -6];
+bubleSort(arr);
+console.log(arr);
+
+// Big-O = O(n^2)
+
+// Insertion Sort
