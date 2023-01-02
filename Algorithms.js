@@ -240,3 +240,6 @@ function quickSort(arr) {
 
 // const arr = [8, 20, -2, 4, -6, 25];
 console.log(quickSort(arr));
+
+//  Worst case - O(n^2)
+// Avg case - O(nlogn)
