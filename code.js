@@ -1,20 +1,17 @@
-function quickSort(arr) {
-  if (arr.length < 2) {
-    return arr;
-  }
-  let pivot = arr[arr.length - 1];
-  let left = [];
-  let right = [];
+const meetups = [
+  { name: 'javascript', isActive: true, membera: 100 },
+  { name: 'Angular', isActive: true, membera: 900 },
+  { name: 'Node', isActive: false, membera: 600 },
+  { name: 'React', isActive: true, membera: 500 },
+];
 
-  for (let i = 0; i < arr.length - 1; i++) {
-    if (arr[i] < pivot) {
-      left.push(arr[i]);
-    } else {
-      right.push(arr[i]);
-    }
-  }
-  return [...quickSort(left), pivot, ...quickSort(right)];
-}
+const membersOnACtiveMeetups = (meetups) =>
+  meetups.filter((meetup) => meetup.isActive);
 
-const arr = [8, 20, -2, 4, -6, 25];
-console.log(quickSort(arr));
+console.log(
+  membersOnACtiveMeetups(meetups).reduce(
+    (sum, meetup) => sum + meetup.membera,
+
+    0
+  )
+);
