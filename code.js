@@ -1,17 +1,9 @@
-const meetups = [
-  { name: 'javascript', isActive: true, membera: 100 },
-  { name: 'Angular', isActive: true, membera: 900 },
-  { name: 'Node', isActive: false, membera: 600 },
-  { name: 'React', isActive: true, membera: 500 },
-];
+function factorial(num) {
+  if (num === 0 || num === 1) return 1;
+  for (var i = num - 1; i >= 1; i--) {
+    num *= i;
+  }
+  return num;
+}
 
-const membersOnACtiveMeetups = (meetups) =>
-  meetups.filter((meetup) => meetup.isActive);
-
-console.log(
-  membersOnACtiveMeetups(meetups).reduce(
-    (sum, meetup) => sum + meetup.membera,
-
-    0
-  )
-);
+console.log(factorial(5));
